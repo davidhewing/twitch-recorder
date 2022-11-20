@@ -23,9 +23,9 @@ Run:
 If username and quality not specified, script defaults to `self.username` and `self.quality` specified in twitch-recorder.py 
 
 ## Options
--s / -u username           - Stream username to record
--p / --directory directory - Directory where to write the recording
--l / --log       logfile   - File to log activity to
+ -s / -u username           - Stream username to record
+ -p / --directory directory - Directory where to write the recording
+ -l / --log       logfile   - File to log activity to
 
 ### Quality options
 
