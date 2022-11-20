@@ -1,6 +1,8 @@
 # twitch-recorder
 
-Python Script to automatically archive Twitch streams, checking periodically to see if channel is live. Adapted from an old blog post, using newer Twitch API and other minor tweaks. [How to Record Twitch Streams Automatically in Python](https://www.godo.dev/tutorials/python-record-twitch/)
+Python Script to automatically archive Twitch streams, checking periodically to see if channel is live. Adapted from an old blog post, using newer Twitch API and other minor tweaks. [How to Record Twitch Streams Automatically in Python](https://www.godo.dev/tutorials/python-record-twitch/).  
+
+This version is further enhanced from rashdanml/twitch-recorder and other copies of this script from sources around the internet.
 
 ## Setup
 
