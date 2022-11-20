@@ -7,9 +7,6 @@ root_path = "."
 username = "put_stream_to_record_here"
 
 # client_id and client_secrect created for this application - see readme
+# Application needs to be browser extension
 client_id = "put_client_id_here"
 client_secret = "put_client_secret_here"
-
-# auth_token comes from the browser cookies for twitch - needs updating every 30 days
-auth_token = "put_browser_token_here"
-
