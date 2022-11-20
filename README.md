@@ -8,8 +8,7 @@ This version is further enhanced from [rashdanml/twitch-recorder](https://github
 
 - Clone the repository
 - Rename config-example.py to config.py
-- Obtain ClientID and ClientSecret from dev.twitch.tv by creating an application, update config.py with it. 
-- Navigate to Twitch.tv, login, and use the browser development tools to find the cookie named "auth-token" and copy its value to config.py
+- Obtain ClientID and ClientSecret from dev.twitch.tv by creating an application with the "Browser Extension" type, update config.py with it.
 - Create virtual environment, install dependencies from requirements.txt
 
 ### Key dependencies
