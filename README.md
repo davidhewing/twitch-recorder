@@ -30,6 +30,3 @@ If username and quality not specified, script defaults to `self.username` and `s
 ### Quality options
 
 Available options depend on the stream, which can be checked by running `streamlink`. Options: best, 1080p, 720p, 480p, 360p, etc. **best** selects the highest available. 
-
-### NOTE
-The auth-token needs to be updated monthly.  Streamlink is using a different Twitch API than the application API.  Once a fix is found, this may no longer be required.
