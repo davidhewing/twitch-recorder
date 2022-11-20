@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #
-#  
+#  Original 
 
 import datetime
 import enum
@@ -40,8 +40,6 @@ class TwitchRecorder:
         # twitch configuration
         self.client_id = config.client_id
         self.client_secret = config.client_secret
-        if hasattr(config,"auth_token"):
-            self.auth_token = config.auth_token
 
         self.token_url = "https://id.twitch.tv/oauth2/token?client_id=" + self.client_id + "&client_secret=" \
                          + self.client_secret + "&grant_type=client_credentials"
@@ -52,6 +50,7 @@ class TwitchRecorder:
         token_response = requests.post(self.token_url, timeout=15)
         token_response.raise_for_status()
         token = token_response.json()
+        logging.info("Access token: "+token["access_token"])
         return token["access_token"]
 
     def run(self):
@@ -154,19 +153,11 @@ class TwitchRecorder:
 
                 # start streamlink process
                 start = time.time()
-                if hasattr(config,"auth_token"):
-                    logging.info("Calling streamlink with auth_token")
-                    subprocess.call(
-                        ["/usr/local/bin/streamlink", "--twitch-api-header=Authorization=OAuth " + self.auth_token, 
-                        "--twitch-disable-ads", "twitch.tv/" + self.username,
-                        self.quality, "-o", recorded_filename])
-
-                else:
-                    logging.info("Calling streamlink without auth_token - ads may cause stream skips")
-                    subprocess.call(
-                        ["/usr/local/bin/streamlink", "--twitch-disable-ads", "twitch.tv/" + self.username,
-                        self.quality, "-o", recorded_filename])
-                
+                logging.info("Calling streamlink with auth_token")
+                subprocess.call(
+                    ["/usr/local/bin/streamlink", "--twitch-api-header=Authorization=OAuth " + self.auth_token, "-linfo", 
+                    "--twitch-disable-ads", "twitch.tv/" + self.username,
+                    self.quality, "-o", recorded_filename])
 
                 end = time.time()
 
