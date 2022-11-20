@@ -22,6 +22,11 @@ Run:
 
 If username and quality not specified, script defaults to `self.username` and `self.quality` specified in twitch-recorder.py 
 
+## Options
+-s / -u username           - Stream username to record
+-p / --directory directory - Directory where to write the recording
+-l / --log       logfile   - File to log activity to
+
 ### Quality options
 
 Available options depend on the stream, which can be checked by running `streamlink`. Options: best, 1080p, 720p, 480p, 360p, etc. **best** selects the highest available. 
