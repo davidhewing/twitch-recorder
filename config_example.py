@@ -10,3 +10,6 @@ username = "put_stream_to_record_here"
 # Application needs to be browser extension
 client_id = "put_client_id_here"
 client_secret = "put_client_secret_here"
+
+# This value comes from Twitch cookies from a browser for auth-token
+auth_token = "put_cookie_token_here"
